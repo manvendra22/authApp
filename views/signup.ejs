@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Signup</title>
+</head>
+<body>
+    <div class="container">
+        <div class="col-sm-6 col-sm-offset-3">
+            <h2><span class="fa fa-sign-in"></span> Signup</h2>
+
+            <!--  Show any message comes with login -->
+            <% if (message.length > 0) { %>
+            <div class="alert alert-danger"> <%= message %> </div>
+            <% } %>
+
+            <!-- Signup form -->
+            <form action="/signup" method="post">
+
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input required type="text" class="form-control" name="username" placeholder="Enter Username">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input required type="password" class="form-control" name="password" placeholder="Enter Password">
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-lg">Signup</button>
+
+                <hr>
+
+                <p> <a href="/login">Login</a> </p>
+                <p> <a href="/">Home</a> </p>
+
+            </form>
+        </div>
+    </div>
+</body>
+</html>
